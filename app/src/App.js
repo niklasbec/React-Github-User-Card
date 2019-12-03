@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import UserList from './components/userlist'
 
 function App() {
   return (
     <div className="App">
-      <p>Hi</p>
+      <UserList />
     </div>
   );
 }
