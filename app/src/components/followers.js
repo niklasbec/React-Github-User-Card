@@ -1,17 +1,23 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const Button = styled.button`
+
+`
+
 export default class Followers extends React.Component {
     constructor(props) {
         super(props)
     }
     render() {
         return(
-            <div>
+            <div className='followers'>
             {
             this.props.data.followerData.map(follower => (
-            <div key={follower.id}>
-                <p>Name: {follower.login}</p>
-                <button><a href={follower.html_url}>Go to Profile</a></button>
-                <img width='300px' src={follower.html_url} alt='image of user'/>
+            <div className='follower' key={follower.id}>
+                <p>Username: {follower.login}</p>
+                <img width='300px' src={follower.avatar_url} alt='image of user'/>
+                <button className='button'><a target='_blank' href={follower.html_url}>Go to Profile</a></button>
             </div>
             ))}
             </div>
